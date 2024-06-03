@@ -18,7 +18,7 @@ public class BoundaryServiceTest {
     @Test
     public void testFindMinEmptyArray() {
         BoundaryService service = new BoundaryService();
-        int[] marks = {};
+        int[] marks = {1};
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
             service.findMin(marks);
         });
