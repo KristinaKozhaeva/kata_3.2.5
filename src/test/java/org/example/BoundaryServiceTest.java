@@ -24,21 +24,21 @@ public class BoundaryServiceTest {
         });
     }
 
-//    static Stream<Arguments> provideArraysForMinSearch() {
-//        return Stream.of(
-//                Arguments.of("Поиск по массиву с положительными числами", new int[]{5, 3, 8, 6, 2, 4}, 2),
-//                Arguments.of("Поиск по массиву с отрицательными числами", new int[]{-5, -3, -8, -6, -2, -4}, -8),
-//                Arguments.of("Поиск по массиву с одним элементом", new int[]{42}, 42)
-//        );
-//    }
-//
-//    @DisplayName("Параметризированный тест поиска минимального значения в массиве")
-//    @ParameterizedTest(name = "{0}")
-//    @MethodSource("provideArraysForMinSearch")
-//    public void testFindMin(String name, int[] marks, int expectedResult) {
-//        BoundaryService service = new BoundaryService();
-//        int result = service.findMin(marks);
-//        assertEquals(expectedResult, result);
-//    }
+    static Stream<Arguments> provideArraysForMinSearch() {
+        return Stream.of(
+                Arguments.of("Поиск по массиву с положительными числами", new int[]{5, 3, 8, 6, 2, 4}, 2),
+                Arguments.of("Поиск по массиву с отрицательными числами", new int[]{-5, -3, -8, -6, -2, -4}, -8),
+                Arguments.of("Поиск по массиву с одним элементом", new int[]{42}, 42)
+        );
+    }
+
+    @DisplayName("Параметризированный тест поиска минимального значения в массиве")
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("provideArraysForMinSearch")
+    public void testFindMin(String name, int[] marks, int expectedResult) {
+        BoundaryService service = new BoundaryService();
+        int result = service.findMin(marks);
+        assertEquals(expectedResult, result);
+    }
 
 }
